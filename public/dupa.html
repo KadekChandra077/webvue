@@ -82,13 +82,13 @@
                                 <div class="mt-4 font-bold">
                                     <p>Total</p>
                                     <p v-if="wallet !== ''">Bayar</p>
-                                    <p v-if="wallet !== '' && wallet >= getTotal()" class="text-red-500">Kembalian</p>
+                                    <p v-if="wallet !== '' && wallet >= getTotal()" class="text-white">Kembalian</p>
                                     <p v-if="wallet !== '' && wallet < getTotal()" class="text-red-500">Dana tidak mencukupi</p>
                                 </div>
                                 <div class="mt-4 font-bold">
                                     <p>: Rp {{ formatNumber(getTotal()) }}</p>
                                     <p v-if="wallet !== ''">: Rp {{ formatNumber(wallet) }}</p>
-                                    <p v-if="wallet !== '' && wallet >= getTotal()" class="text-teal-900">: Rp {{ formatNumber(wallet - getTotal()) }}</p>
+                                    <p v-if="wallet !== '' && wallet >= getTotal()" class="text-white">: Rp {{ formatNumber(wallet - getTotal()) }}</p>
                                     <p v-if="wallet !== '' && wallet < getTotal()" class="text-red-500"></p>
                                 </div>
                             </div>
